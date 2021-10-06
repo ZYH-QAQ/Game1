@@ -64,8 +64,8 @@ public class MonsterGenerator : MonoBehaviour
             int i = 0;
             while(i<=3)
             {
-                float x = Random.Range(-7.0f, 7.0f);
-                float y = Random.Range(-3f, 3f);
+                float x = Random.Range(-5.0f, 5.0f);
+                float y = Random.Range(-1.7f, 1.7f);
                 Vector3 roomPosition = this.gameObject.transform.parent.position;
 
                 bool judge = Physics2D.OverlapArea(new Vector2(x - monster1.GetComponent<MonsterInformation>().hitBoxWidth / 2 + roomPosition.x, y + monster1.GetComponent<MonsterInformation>().hitBoxHight / 2 + roomPosition.y), new Vector2(x + monster1.GetComponent<MonsterInformation>().hitBoxWidth / 2 + roomPosition.x, y - monster1.GetComponent<MonsterInformation>().hitBoxHight / 2 + roomPosition.y), roomLayer);

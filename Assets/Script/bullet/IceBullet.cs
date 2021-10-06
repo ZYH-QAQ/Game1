@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class IceBullet : MonoBehaviour
 {
     //Vector3 lastPosition;
     private Vector3 direction;
     public float damage;
-
+    float angle;
 
     public int speed;
     void Start()
     {
         GameObject shooter = GameObject.Find("Player");
         direction = shooter.transform.up;
+        angle = Vector3.Angle(this.transform.position - shooter.transform.position, new Vector3(0, 1, 0));
+        if(Vector3.Dot((this.transform.position - shooter.transform.position),Vector3.right)>=0)
+            this.transform.Rotate(new Vector3(0,0,1)*-angle);
+        else
+            this.transform.Rotate(new Vector3(0, 0, 1) * angle);
+
     }
 
     void Update()
@@ -33,9 +39,14 @@ public class bullet : MonoBehaviour
     {
         if (collision.CompareTag("Monster"))
         {
-            collision.gameObject.GetComponent<MonsterLifeSystem>().HitMonster(damage);
+            if(collision.gameObject.GetComponent<MonsterLifeSystem>()!=null)
+               collision.gameObject.GetComponent<MonsterLifeSystem>().HitMonster(damage);
+            if (collision.gameObject.GetComponent<MonsterCold>() != null)
+            {
+                collision.gameObject.GetComponent<MonsterCold>().cold = true;
+            }
         }
-        if (!collision.CompareTag("Player")&&!collision.CompareTag("Ignore"))
+        if (!collision.CompareTag("Player")&&!collision.CompareTag("Ignore")&& !collision.CompareTag("BulletPlayer")&& !collision.CompareTag("BulletMonster"))
         {
             Destroy(this.gameObject);
         }

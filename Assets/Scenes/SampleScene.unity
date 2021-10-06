@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c53bfd34922724690e3b4f5a7e68f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 2616648284806518563, guid: 73eabcfac5416a841afe476abbd5cb60, type: 3}
+  myPrefab: {fileID: 3636350127993109743, guid: 7223ca1b087addc45801334373ff6813, type: 3}
 --- !u!114 &1742208484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,13 +756,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 1742208478}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7e03b056fcb76d247b881fa39de0a097, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1.4
 --- !u!114 &1742208488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,4 +822,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 1.1

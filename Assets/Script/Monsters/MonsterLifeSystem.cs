@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MonsterLifeSystem : MonoBehaviour
 {
-    private float life;
+    public float life;
     public Sprite hurtImage;
     public Sprite oriImage;
     private float time = 0;
     private bool judgeHurt;
+    public GameObject GreenFog;
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +47,8 @@ public class MonsterLifeSystem : MonoBehaviour
         this.life -= damage;
         this.gameObject.GetComponent<MonsterInformation>().angry = true;
         judgeHurt = true;
+        if(this.gameObject.GetComponent<GreenGeorge>()!=null)
+            Instantiate(GreenFog, this.transform.position, Quaternion.identity);
+
     }
 }

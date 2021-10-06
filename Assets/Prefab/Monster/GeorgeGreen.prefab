@@ -85,9 +85,10 @@ GameObject:
   - component: {fileID: -3753058107336520069}
   - component: {fileID: -6205190156000285297}
   - component: {fileID: 8678539719695561119}
-  - component: {fileID: 8966165065361270080}
+  - component: {fileID: 6810416653801502178}
+  - component: {fileID: 7840954758532956336}
   m_Layer: 7
-  m_Name: George
+  m_Name: GeorgeGreen
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +149,7 @@ SpriteRenderer:
   m_SortingLayerID: 1099806995
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bc6f30e96073a1740acdb7261842798b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11b6e9673f99ef148a5b9764f871eb4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   hurtImage: {fileID: 21300000, guid: 9e6e30999f0dee7429357d294c47bfae, type: 3}
-  oriImage: {fileID: 21300000, guid: bc6f30e96073a1740acdb7261842798b, type: 3}
+  oriImage: {fileID: 21300000, guid: 11b6e9673f99ef148a5b9764f871eb4a, type: 3}
   GreenFog: {fileID: 491571616056492556, guid: 27668c8e273848b4fb9af02078cb9ed3, type: 3}
 --- !u!114 &8678539719695561119
 MonoBehaviour:
@@ -262,7 +263,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seePlayer: 0
   vision: {fileID: 7794340190958549651, guid: c13f6d14e5b99ea44993514a301c4d4d, type: 3}
---- !u!114 &8966165065361270080
+--- !u!114 &6810416653801502178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748243428528581024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddd426f299097d4e9f1a8b5c32c3cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7840954758532956336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,5 +287,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9603445f0d73a41acdc2b158107882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coldSprite: {fileID: 21300000, guid: 6497b08de487c004da764aeca650d433, type: 3}
+  coldSprite: {fileID: 0}
   cold: 0

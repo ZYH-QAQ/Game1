@@ -85,6 +85,8 @@ GameObject:
   - component: {fileID: 1965851945771292611}
   - component: {fileID: 7674949780198532026}
   - component: {fileID: 4277823299553180984}
+  - component: {fileID: 1066637536121910972}
+  - component: {fileID: 2579305925763081546}
   m_Layer: 7
   m_Name: Piggy
   m_TagString: Monster
@@ -101,7 +103,7 @@ Transform:
   m_GameObject: {fileID: 7421545149552624556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 3476192699142608300}
   m_Father: {fileID: 0}
@@ -170,11 +172,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7e03b056fcb76d247b881fa39de0a097, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -222,7 +224,7 @@ MonoBehaviour:
   walkingSpeed: 1
   angry: 0
   angryRange: 9
-  power: 0
+  power: 5
   attackByTouch: 0
   width: 1.9
   hight: 3
@@ -257,5 +259,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7db7121bb275d54499a95dd23998728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 0
   hurtImage: {fileID: 21300000, guid: 3057b2b27fb186b448e608c3878bfdbd, type: 3}
   oriImage: {fileID: 21300000, guid: 274ef4d5be15a564781044f96ee2e0fa, type: 3}
+  GreenFog: {fileID: 491571616056492556, guid: 27668c8e273848b4fb9af02078cb9ed3, type: 3}
+--- !u!114 &1066637536121910972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421545149552624556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c62de6cf4959642a94c16494b49e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterBullet: {fileID: 1407879543510870845, guid: d042001235e01ea4fa15ed62b7d78643, type: 3}
+--- !u!114 &2579305925763081546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421545149552624556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9603445f0d73a41acdc2b158107882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coldSprite: {fileID: 21300000, guid: d2526ca88e60321429a4fed4064f73f0, type: 3}
+  cold: 0
