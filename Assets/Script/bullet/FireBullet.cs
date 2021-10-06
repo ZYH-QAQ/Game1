@@ -10,6 +10,8 @@ public class FireBullet : MonoBehaviour
     float angle;
 
     public int speed;
+
+
     void Start()
     {
         GameObject shooter = GameObject.Find("Player");
@@ -24,6 +26,7 @@ public class FireBullet : MonoBehaviour
 
     void Update()
     {
+
         //Vector3 direction = Vector3.Normalize(transform.position - lastPosition);
         transform.position += direction * Time.deltaTime * speed;
         //Debug.Log(++i);
@@ -33,7 +36,7 @@ public class FireBullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

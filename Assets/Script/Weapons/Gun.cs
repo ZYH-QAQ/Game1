@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class machine_gun : MonoBehaviour
+public class Gun : MonoBehaviour
 {
-    public GameObject myPrefab;
+    public GameObject bullet;
     float deltaT;
-    public float setDeltaT = 0.1f;
+    public float setDeltaT = 0.5f;
 
     void Start()
     {
-        
+        bullet = this.GetComponent<player22>().myPrefab;
+
     }
 
     // Update is called once per frame
@@ -26,9 +27,9 @@ public class machine_gun : MonoBehaviour
     {
         if (deltaT >= setDeltaT)
         {
-            GameObject bullet = Instantiate(myPrefab);
+            GameObject bullet = Instantiate(this.bullet);
             bullet.transform.position = this.transform.position + this.transform.up;
-            bullet.name = "my_bullet";
+            //bullet.name = "my_bullet";
             deltaT = 0;
         }
         deltaT += Time.deltaTime;

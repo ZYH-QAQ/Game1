@@ -10,6 +10,7 @@ public class IceBullet : MonoBehaviour
     float angle;
 
     public int speed;
+
     void Start()
     {
         GameObject shooter = GameObject.Find("Player");
@@ -33,7 +34,6 @@ public class IceBullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

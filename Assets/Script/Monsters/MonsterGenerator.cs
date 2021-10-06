@@ -12,9 +12,11 @@ public class MonsterGenerator : MonoBehaviour
     public GameObject monster3;
     public LayerMask roomLayer;
 
+    GameObject monsters;
     // Start is called before the first frame update
     void Start()
     {
+        monsters = GameObject.Find("Monsters");
         roomGenerator = GameObject.Find("RoomGenerator");
         for (int i = 0; i < roomGenerator.GetComponent<RoomGenerator>().rooms.Count; i++)
         {
@@ -71,7 +73,7 @@ public class MonsterGenerator : MonoBehaviour
                 bool judge = Physics2D.OverlapArea(new Vector2(x - monster1.GetComponent<MonsterInformation>().hitBoxWidth / 2 + roomPosition.x, y + monster1.GetComponent<MonsterInformation>().hitBoxHight / 2 + roomPosition.y), new Vector2(x + monster1.GetComponent<MonsterInformation>().hitBoxWidth / 2 + roomPosition.x, y - monster1.GetComponent<MonsterInformation>().hitBoxHight / 2 + roomPosition.y), roomLayer);
                 if (!judge)
                 {
-                    Instantiate(monster1, roomPosition + new Vector3(x, y, 0), Quaternion.identity);
+                    Instantiate(monster1, roomPosition + new Vector3(x, y, 0), Quaternion.identity,monsters.transform);
                     i++;
                 }
 
@@ -90,7 +92,7 @@ public class MonsterGenerator : MonoBehaviour
                 bool judge = Physics2D.OverlapArea(new Vector2(x - monster2.GetComponent<MonsterInformation>().hitBoxWidth / 2 + roomPosition.x, y + monster2.GetComponent<MonsterInformation>().hitBoxHight / 2 + roomPosition.y), new Vector2(x + monster2.GetComponent<MonsterInformation>().hitBoxWidth / 2 + roomPosition.x, y - monster2.GetComponent<MonsterInformation>().hitBoxHight / 2 + roomPosition.y), roomLayer);
                 if (!judge)
                 {
-                    Instantiate(monster2, roomPosition + new Vector3(x, y, 0), Quaternion.identity);
+                    Instantiate(monster2, roomPosition + new Vector3(x, y, 0), Quaternion.identity,monsters.transform);
                     i++;
                 }
 

@@ -37,6 +37,12 @@ public class PlayerLifeSystem : MonoBehaviour
         {
             Debug.Log("game over");
         }
+
+        if (life > 100)
+        {
+            life = 100;
+        }
+
     }
 
     public void HitPlayer(float damage)

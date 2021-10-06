@@ -13,7 +13,7 @@ public class bullet : MonoBehaviour
     void Start()
     {
         GameObject shooter = GameObject.Find("Player");
-        direction = shooter.transform.up;
+        direction =Vector3.Normalize(this.transform.position- shooter.transform.position);
     }
 
     void Update()

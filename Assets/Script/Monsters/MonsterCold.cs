@@ -28,7 +28,8 @@ public class MonsterCold : MonoBehaviour
         {
             time = 0;
             this.gameObject.GetComponent<MonsterInformation>().speed=oriSpeed;
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<MonsterLifeSystem>().oriImage;            
+            if (this.gameObject.GetComponent<SpriteRenderer>().sprite != this.gameObject.GetComponent<MonsterLifeSystem>().hurtImage)
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<MonsterLifeSystem>().oriImage;
 
         }
         if(time>0)
