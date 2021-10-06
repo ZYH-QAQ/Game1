@@ -8,17 +8,27 @@ public class LandscapeGenerator : MonoBehaviour
     public GameObject obstacle2;
     public GameObject obstacle3;
     public GameObject obstacle4;
+    public GameObject obstacle5;
+
     public LayerMask roomLayer;
+    GameObject RoomGenerator;
 
     // Start is called before the first frame update
     void Start()
     {
-        AddObject(obstacle4, 8, 8);
-        AddObject(obstacle3, 10, 9);
-        AddObject(obstacle2, 4, 3);
-        AddObject(obstacle1, 5, 3);
+        RoomGenerator = GameObject.Find("RoomGenerator");
+        if (this.gameObject != RoomGenerator.GetComponent<RoomGenerator>().rooms[10].gameObject&& this.gameObject != RoomGenerator.GetComponent<RoomGenerator>().rooms[0].gameObject)
+        {
+            AddObject(obstacle4, 8, 8);
+            AddObject(obstacle3, 10, 9);
+            AddObject(obstacle2, 4, 3);
+            AddObject(obstacle1, 5, 3);
+            AddObject(obstacle5, 3, 3);
+        }
+        else
+        {
 
-
+        }
     }
 
     // Update is called once per frame

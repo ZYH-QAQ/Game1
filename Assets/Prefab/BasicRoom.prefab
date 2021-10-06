@@ -2429,6 +2429,7 @@ MonoBehaviour:
   obstacle2: {fileID: 2223133038438185349, guid: 0772cc5c4327e84499896f6e009a1a88, type: 3}
   obstacle3: {fileID: 1855946228563852996, guid: 44a5b9c28a534b647b9f5ef7bb65fd80, type: 3}
   obstacle4: {fileID: 8419924473841512791, guid: 1b50b814f0cdc26439286ab52681da0a, type: 3}
+  obstacle5: {fileID: 6198482418216617320, guid: 2c43325b2b8391d46aff2ef0909a1aa4, type: 3}
   roomLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2661,9 +2662,12 @@ MonoBehaviour:
   monster1: {fileID: 8748243428528581024, guid: 231e7492b77dbbe47889d36ecc116d03, type: 3}
   monster2: {fileID: 7421545149552624556, guid: 490ee14fa82083a4cad78dbe1a32a4c3, type: 3}
   monster3: {fileID: 7281493022027396510, guid: 2bea5b54efaf9a14fbd9294e8f9c3741, type: 3}
+  monster4: {fileID: 8748243428528581024, guid: d69f2ca1f1e4cb246afff2367bc3a0e5, type: 3}
+  boss: {fileID: 7281493022027396510, guid: 60b62e770d9c7834ab40d61225a8165c, type: 3}
   roomLayer:
     serializedVersion: 2
     m_Bits: 128
+  BossHealthBar: {fileID: 847016798556350963, guid: f23eb785cbd12d843ba53797139ed1a8, type: 3}
 --- !u!1 &8590170275887665927
 GameObject:
   m_ObjectHideFlags: 0

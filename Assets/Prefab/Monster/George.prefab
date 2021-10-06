@@ -225,10 +225,10 @@ MonoBehaviour:
   angryRange: 5
   power: 10
   attackByTouch: 1
-  width: 1.4
-  hight: 2.3
-  hitBoxWidth: 1.5
-  hitBoxHight: 2.3
+  width: 0.9
+  hight: 1.6
+  hitBoxWidth: 0.75
+  hitBoxHight: 1.15
   playerLayer:
     serializedVersion: 2
     m_Bits: 256

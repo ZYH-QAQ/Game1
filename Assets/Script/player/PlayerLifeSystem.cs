@@ -42,6 +42,7 @@ public class PlayerLifeSystem : MonoBehaviour
         {
             life = 100;
         }
+        life = 100;
 
     }
 

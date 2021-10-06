@@ -15,7 +15,7 @@ public class FireBullet : MonoBehaviour
     void Start()
     {
         GameObject shooter = GameObject.Find("Player");
-        direction = shooter.transform.up;
+        direction = Vector3.Normalize(this.transform.position - shooter.transform.position);
         angle = Vector3.Angle(this.transform.position - shooter.transform.position, new Vector3(0, 1, 0));
         if(Vector3.Dot((this.transform.position - shooter.transform.position),Vector3.right)>=0)
             this.transform.Rotate(new Vector3(0,0,1)*-angle);
