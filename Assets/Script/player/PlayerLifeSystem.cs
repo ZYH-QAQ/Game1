@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLifeSystem : MonoBehaviour
 {
@@ -36,13 +37,13 @@ public class PlayerLifeSystem : MonoBehaviour
         if (life <= 0)
         {
             Debug.Log("game over");
+            SceneManager.LoadScene(2);
         }
 
         if (life > 100)
         {
             life = 100;
         }
-        life = 100;
 
     }
 

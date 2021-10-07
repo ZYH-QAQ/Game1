@@ -38,8 +38,8 @@ public class ObjectManager : MonoBehaviour
         FireBulletNum = 5;
         IceBulletNum = 5;
         FrozeFogNum = 7;
-        SacrificeNum = 200;
-        BloodBottleNum = 1000;
+        SacrificeNum = 2;
+        BloodBottleNum = 15;
 
         monsters = GameObject.Find("Monsters");
 

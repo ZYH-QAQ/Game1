@@ -224,7 +224,7 @@ MonoBehaviour:
   walkingSpeed: 1
   angry: 0
   angryRange: 9
-  power: 5
+  power: 10
   attackByTouch: 0
   width: 1.9
   hight: 3

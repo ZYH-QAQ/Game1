@@ -10,10 +10,19 @@ public class MonsterLifeSystem : MonoBehaviour
     private float time = 0;
     private bool judgeHurt;
     public GameObject GreenFog;
+    GameObject player;
 
+    private void OnDestroy()
+    {
+        if(this.gameObject.GetComponent<BossBehaviour>()!=null)
+        {
+            player.GetComponent<Win>().judgeWin = true;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         life = this.gameObject.GetComponent<MonsterInformation>().life;
     }
 

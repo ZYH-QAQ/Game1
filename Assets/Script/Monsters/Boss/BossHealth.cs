@@ -26,6 +26,8 @@ public class BossHealth : MonoBehaviour
             {
                 Bosshealth.text += "-";
             }
+
         }
+        
     }
 }
